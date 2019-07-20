@@ -20,74 +20,70 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pAr-MB-5pE">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LrO-qa-nMV" customClass="RoundedShadow" customModule="vision_app_dev" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="20" width="335" height="60"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="BZW-0b-GAb">
-                                                <rect key="frame" x="8" y="8" width="319" height="44"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Items pictured will appear here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="X9S-fY-RD5">
-                                                        <rect key="frame" x="0.0" y="0.0" width="319" height="24.5"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                        <color key="textColor" red="0.56078431370000004" green="0.81176470590000005" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Confidence:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sg2-aP-gZt">
-                                                        <rect key="frame" x="0.0" y="27.5" width="319" height="16.5"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                                        <color key="textColor" red="0.56078431370000004" green="0.81176470590000005" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="BZW-0b-GAb" firstAttribute="top" secondItem="LrO-qa-nMV" secondAttribute="top" constant="8" id="19M-2S-b27"/>
-                                            <constraint firstAttribute="bottom" secondItem="BZW-0b-GAb" secondAttribute="bottom" constant="8" id="Kik-jy-cNZ"/>
-                                            <constraint firstAttribute="trailing" secondItem="BZW-0b-GAb" secondAttribute="trailing" constant="8" id="RJD-CG-PpH"/>
-                                            <constraint firstAttribute="height" constant="60" id="UDL-SI-xnn"/>
-                                            <constraint firstItem="BZW-0b-GAb" firstAttribute="leading" secondItem="LrO-qa-nMV" secondAttribute="leading" constant="8" id="dlF-ta-6wl"/>
-                                        </constraints>
-                                    </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J62-LJ-Th1" customClass="RoundedShadowButton" customModule="vision_app_dev" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="594" width="100" height="33"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="wL9-YI-MHA"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                        <state key="normal" title="FLASH OFF">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q0q-VH-NcK" customClass="RoundedShadowImageView" customModule="vision_app_dev" customModuleProvider="target">
-                                        <rect key="frame" x="285" y="502" width="70" height="125"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="125" id="U8L-gv-Tj0"/>
-                                            <constraint firstAttribute="width" constant="70" id="m8t-QD-XXc"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.56078431370000004" green="0.81176470590000005" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J62-LJ-Th1" customClass="RoundedShadowButton" customModule="vision_app_dev" customModuleProvider="target">
+                                <rect key="frame" x="20" y="614" width="100" height="33"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="q0q-VH-NcK" secondAttribute="trailing" constant="20" id="8Db-8d-5hJ"/>
-                                    <constraint firstAttribute="bottom" secondItem="q0q-VH-NcK" secondAttribute="bottom" constant="20" id="AVj-og-g3w"/>
-                                    <constraint firstItem="J62-LJ-Th1" firstAttribute="leading" secondItem="pAr-MB-5pE" secondAttribute="leading" constant="20" id="ELT-lv-sDR"/>
-                                    <constraint firstAttribute="trailing" secondItem="LrO-qa-nMV" secondAttribute="trailing" constant="20" id="FoJ-Cu-QDb"/>
-                                    <constraint firstItem="LrO-qa-nMV" firstAttribute="leading" secondItem="pAr-MB-5pE" secondAttribute="leading" constant="20" id="hmt-7C-Xgy"/>
-                                    <constraint firstItem="LrO-qa-nMV" firstAttribute="top" secondItem="pAr-MB-5pE" secondAttribute="top" constant="20" id="pn8-kM-JOu"/>
-                                    <constraint firstAttribute="bottom" secondItem="J62-LJ-Th1" secondAttribute="bottom" constant="20" id="tue-a6-pG3"/>
+                                    <constraint firstAttribute="width" constant="100" id="wL9-YI-MHA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="FLASH OFF">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q0q-VH-NcK" customClass="RoundedShadowImageView" customModule="vision_app_dev" customModuleProvider="target">
+                                <rect key="frame" x="285" y="522" width="70" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="U8L-gv-Tj0"/>
+                                    <constraint firstAttribute="width" constant="70" id="m8t-QD-XXc"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LrO-qa-nMV" customClass="RoundedShadow" customModule="vision_app_dev" customModuleProvider="target">
+                                <rect key="frame" x="20" y="40" width="335" height="60"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="BZW-0b-GAb">
+                                        <rect key="frame" x="8" y="8" width="319" height="44"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Items pictured will appear here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="X9S-fY-RD5">
+                                                <rect key="frame" x="0.0" y="0.0" width="319" height="24.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" red="0.56078431370000004" green="0.81176470590000005" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confidence:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sg2-aP-gZt">
+                                                <rect key="frame" x="0.0" y="27.5" width="319" height="16.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                <color key="textColor" red="0.56078431370000004" green="0.81176470590000005" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="BZW-0b-GAb" firstAttribute="top" secondItem="LrO-qa-nMV" secondAttribute="top" constant="8" id="19M-2S-b27"/>
+                                    <constraint firstAttribute="bottom" secondItem="BZW-0b-GAb" secondAttribute="bottom" constant="8" id="Kik-jy-cNZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="BZW-0b-GAb" secondAttribute="trailing" constant="8" id="RJD-CG-PpH"/>
+                                    <constraint firstAttribute="height" constant="60" id="UDL-SI-xnn"/>
+                                    <constraint firstItem="BZW-0b-GAb" firstAttribute="leading" secondItem="LrO-qa-nMV" secondAttribute="leading" constant="8" id="dlF-ta-6wl"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q0q-VH-NcK" secondAttribute="trailing" constant="20" id="7ES-Mo-0ht"/>
                             <constraint firstItem="pAr-MB-5pE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="OcJ-2x-gX6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="J62-LJ-Th1" secondAttribute="bottom" constant="20" id="Prg-ot-Kvo"/>
+                            <constraint firstItem="LrO-qa-nMV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Sms-qg-E8h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="q0q-VH-NcK" secondAttribute="bottom" constant="20" id="TlA-O9-SNT"/>
+                            <constraint firstItem="J62-LJ-Th1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Y69-Cq-XY3"/>
                             <constraint firstItem="pAr-MB-5pE" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Z6t-WZ-D1h"/>
                             <constraint firstItem="pAr-MB-5pE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="eHr-Eg-gIK"/>
                             <constraint firstItem="pAr-MB-5pE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gEZ-iW-9Gf"/>
+                            <constraint firstItem="LrO-qa-nMV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mYb-xv-Pa6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LrO-qa-nMV" secondAttribute="trailing" constant="20" id="orx-Ls-fXl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
