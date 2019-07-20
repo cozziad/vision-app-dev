@@ -8,6 +8,8 @@
 
 import UIKit
 import AVFoundation
+import CoreML
+import Vision
 
 class CameraVC: UIViewController {
 
@@ -25,6 +27,7 @@ class CameraVC: UIViewController {
     var previewLayer: AVCaptureVideoPreviewLayer!
     
     var photoData: Data?
+    var flashIsOn: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +39,6 @@ class CameraVC: UIViewController {
         previewLayer.frame = cameraView.bounds
     }
     
-   
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -64,27 +66,60 @@ class CameraVC: UIViewController {
         catch{}
     }
     
-    @objc func didTapCameraView(){
+    @objc func didTapCameraView(sender: UITapGestureRecognizer){
         let settings = AVCapturePhotoSettings()
-//        let previewPixelType = settings.availablePreviewPhotoPixelFormatTypes.first!
-//        let previewFormat = [kCVPixelBufferPixelFormatTypeKey as String: previewPixelType, kCVPixelBufferWidthKey as String: 160, kCVPixelBufferHeightKey as String :160]
-//
-        
         settings.previewPhotoFormat = settings.embeddedThumbnailPhotoFormat
         
+        if flashIsOn{settings.flashMode = .on}
+        else{settings.flashMode = .off}
+    
         cameraOutput.capturePhoto(with: settings, delegate: self)
     }
+    
+    func resultsMethod(request: VNRequest, error:Error?){
+        print("pre guard")
+        guard let results = request.results as? [VNClassificationObservation] else {return}
+        print("did pass guard")
+        for classification in results{
+            if classification.confidence < 0.5{
+                self.IDLbl.text = "Not sure about that?"
+                self.confidenceLbl.text = ""
+            }
+            else{
+                self.IDLbl.text = classification.identifier
+                self.confidenceLbl.text = "Confidence \(Int(classification.confidence*100))%"
+                break
+            }
+        }
+    }
+    
+    @IBAction func flashBtnPressed(_ sender: Any) {
+        if flashIsOn{
+            flashIsOn = false
+            flashBtn.setTitle("FLASH OFF", for: .normal)
+        }
+        else{
+            flashIsOn = true
+            flashBtn.setTitle("FLASH ON", for: .normal)
+        }
+    }
+    
 }
 
 extension CameraVC: AVCapturePhotoCaptureDelegate{
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
-        if let error = error{
-            debugPrint(error)
-            return
-        }
+        if let error = error{debugPrint(error);return}
+        
         photoData = photo.fileDataRepresentation()
         let image = UIImage(data: photoData!)
         self.captureImageView.image = image
+        
+        do{
+            let model = try VNCoreMLModel(for: SqueezeNet().model)
+            let request = VNCoreMLRequest(model: model, completionHandler: resultsMethod)
+            let handler = VNImageRequestHandler(data: photoData!)
+            try handler.perform([request])
+        }catch{debugPrint(error)}
     }
 }
 
