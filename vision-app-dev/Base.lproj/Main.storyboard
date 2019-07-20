@@ -43,6 +43,10 @@
                                     <constraint firstAttribute="width" constant="70" id="m8t-QD-XXc"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="rrf-U1-aQM">
+                                <rect key="frame" x="310" y="574.5" width="20" height="20"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LrO-qa-nMV" customClass="RoundedShadow" customModule="vision_app_dev" customModuleProvider="target">
                                 <rect key="frame" x="20" y="40" width="335" height="60"/>
                                 <subviews>
@@ -77,11 +81,13 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q0q-VH-NcK" secondAttribute="trailing" constant="20" id="7ES-Mo-0ht"/>
+                            <constraint firstItem="rrf-U1-aQM" firstAttribute="centerY" secondItem="q0q-VH-NcK" secondAttribute="centerY" id="8fE-yR-cuJ"/>
                             <constraint firstItem="pAr-MB-5pE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="OcJ-2x-gX6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="J62-LJ-Th1" secondAttribute="bottom" constant="20" id="Prg-ot-Kvo"/>
                             <constraint firstItem="LrO-qa-nMV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Sms-qg-E8h"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="q0q-VH-NcK" secondAttribute="bottom" constant="20" id="TlA-O9-SNT"/>
                             <constraint firstItem="J62-LJ-Th1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Y69-Cq-XY3"/>
+                            <constraint firstItem="rrf-U1-aQM" firstAttribute="centerX" secondItem="q0q-VH-NcK" secondAttribute="centerX" id="YVN-9Q-pb2"/>
                             <constraint firstItem="pAr-MB-5pE" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Z6t-WZ-D1h"/>
                             <constraint firstItem="pAr-MB-5pE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="eHr-Eg-gIK"/>
                             <constraint firstItem="pAr-MB-5pE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gEZ-iW-9Gf"/>
@@ -97,6 +103,7 @@
                         <outlet property="confidenceLbl" destination="sg2-aP-gZt" id="TbO-g4-0PA"/>
                         <outlet property="flashBtn" destination="J62-LJ-Th1" id="ko0-Xj-XCV"/>
                         <outlet property="roundedShadowView" destination="LrO-qa-nMV" id="xQ8-Mi-tOV"/>
+                        <outlet property="spinner" destination="rrf-U1-aQM" id="mi6-lf-YOc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
